@@ -10,14 +10,14 @@ seed = time.time_ns();
 resp = [];
 cont = 0;
 while len(resp) < cant:
-    aux = (seed**(7/8));
+    aux = (seed**(10/11));
     seed = aux;
     aux = aux % 13;
     if aux < ran :
         resp.append(round(aux));
         cont = cont + 1;
         if seed < 13:
-            seed = time.time_ns();
+            seed = time.time_ns()**aux;
 for i in range(len(resp)):
     print(str(resp[i])+" ");
 
